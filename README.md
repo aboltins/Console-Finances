@@ -24,7 +24,7 @@ The greatest decrease in losses (date and amount) over the entire period.
 
 ## Screenshot 
 
-![Screenshot of Console Finances](/assets/console-finances-screenshot.png"Console Finances Screenshot")
+![Screenshot of Console Finances](/assets/console-finances-screenshot.png "Console Finances Screenshot")
 
 ## Installation
 
