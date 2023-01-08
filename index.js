@@ -93,7 +93,9 @@ let netTotal = 0;
 let averageChange = 0;
 let sumOfChanges = 0
 let greatestIncrease = 0;
-let greatestIncreaseMonth = 0;
+let greatestIncreaseMonth;
+let greatestDecrease = 0;
+let greatestDecreaseMonth;
 
 // header title + line underneath
 console.log(header);
@@ -123,8 +125,16 @@ for (var i = 1; i < finances.length; i++) {
         greatestIncreaseMonth = finances[i][0];
     }
 }
-console.log("Greatest Increase in Profits: " + greatestIncreaseMonth + " (" + greatestIncrease + ")" );
+console.log("Greatest Increase in Profits: " + greatestIncreaseMonth + " (" + greatestIncrease + ")");
 
 
-
+// Greatest Decrease 
+for (var i = 1; i < finances.length; i++) {
+    let monthlyProfitChange = finances[i][1] - finances[i - 1][1];
+    if (monthlyProfitChange < greatestDecrease) {
+        greatestDecrease = monthlyProfitChange;
+        greatestDecreaseMonth = finances[i][0];
+    }
+}
+console.log("Greatest Decrease in Profits: " + greatestDecreaseMonth + " (" + greatestDecrease + ")");
 
