@@ -90,6 +90,8 @@ var finances = [
 // variables
 let header = "Financial Analysis";
 let netTotal = 0;
+let averageChange = 0;
+let sumOfChanges = 0;
 
 // header title + line underneath
 console.log(header);
@@ -103,3 +105,13 @@ for(var i = 0; i < finances.length; i++){
     netTotal = finances[i][1] + netTotal;
 }
 console.log("Total: " + netTotal)
+
+// average change
+for(var i = 1; i < finances.length; i++){
+    sumOfChanges = sumOfChanges + (finances[i][1]-finances[i-1][1]);
+}
+
+averageChange = sumOfChanges / (finances.length - 1);
+
+console.log("Average Change: " + averageChange.toFixed(2));
+
