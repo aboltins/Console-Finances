@@ -86,3 +86,13 @@ var finances = [
 ['Jan-2017', 138230],
 ['Feb-2017', 671099]
 ];
+
+// variables
+let header = "Financial Analysis";
+
+// header title + line underneath
+console.log(header);
+console.log('-'.repeat(header.length + 10))
+
+// total number of months
+console.log("Total months: " + finances.length);
