@@ -108,14 +108,14 @@ console.log("Total months: " + finances.length);
 for (var i = 0; i < finances.length; i++) {
     netTotal = finances[i][1] + netTotal;
 }
-console.log("Total: " + netTotal)
+console.log("Total: $" + netTotal)
 
 // average change
 for (var i = 1; i < finances.length; i++) {
     sumOfChanges = sumOfChanges + (finances[i][1] - finances[i - 1][1]);
 }
 averageChange = sumOfChanges / (finances.length - 1);
-console.log("Average Change: " + averageChange.toFixed(2));
+console.log("Average Change: $" + averageChange.toFixed(2));
 
 // greatest increase
 for (var i = 1; i < finances.length; i++) {
@@ -125,7 +125,7 @@ for (var i = 1; i < finances.length; i++) {
         greatestIncreaseMonth = finances[i][0];
     }
 }
-console.log("Greatest Increase in Profits: " + greatestIncreaseMonth + " (" + greatestIncrease + ")");
+console.log("Greatest Increase in Profits: " + greatestIncreaseMonth + " ($" + greatestIncrease + ")");
 
 
 // Greatest Decrease 
@@ -136,5 +136,5 @@ for (var i = 1; i < finances.length; i++) {
         greatestDecreaseMonth = finances[i][0];
     }
 }
-console.log("Greatest Decrease in Profits: " + greatestDecreaseMonth + " (" + greatestDecrease + ")");
+console.log("Greatest Decrease in Profits: " + greatestDecreaseMonth + " ($" + greatestDecrease + ")");
 
