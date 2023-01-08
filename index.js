@@ -89,6 +89,7 @@ var finances = [
 
 // variables
 let header = "Financial Analysis";
+let netTotal = 0;
 
 // header title + line underneath
 console.log(header);
@@ -96,3 +97,9 @@ console.log('-'.repeat(header.length + 10))
 
 // total number of months
 console.log("Total months: " + finances.length);
+
+// net total amount of Profit/Losses.
+for(var i = 0; i < finances.length; i++){
+    netTotal = finances[i][1] + netTotal;
+}
+console.log("Total: " + netTotal)
